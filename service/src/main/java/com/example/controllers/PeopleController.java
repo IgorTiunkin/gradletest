@@ -1,18 +1,16 @@
 package com.example.controllers;
 
 import com.example.services.PeopleService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping("/people")
 public class PeopleController {
     private final PeopleService peopleService;
-
-    public PeopleController(PeopleService peopleService) {
-        this.peopleService = peopleService;
-    }
 
     @RequestMapping
     public String index () {
